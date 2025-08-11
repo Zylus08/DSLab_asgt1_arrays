@@ -2,7 +2,7 @@
 using namespace std;
 
 void removeDuplicates(int arr[], int &size) {
-    int temp[size];
+    int* temp = new int[size];
     int newSize = 0;
 
     for (int i = 0; i < size; i++) {
@@ -24,6 +24,7 @@ void removeDuplicates(int arr[], int &size) {
         arr[i] = temp[i];
     }
     size = newSize;
+    delete[] temp;
 }
 
 void display(int arr[], int size) {
